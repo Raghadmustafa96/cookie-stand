@@ -58,6 +58,10 @@ body{
     margin: 10px;
   }
 
+  table, th{
+    border: 2px solid black;
+    text-align:center;
+  }
 
   footer{
     background:rgb(10, 22, 48);
