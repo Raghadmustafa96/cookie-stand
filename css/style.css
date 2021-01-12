@@ -3,7 +3,7 @@ body{
   }
   
   main{
-    height: 600px;
+    height: 550px;
     color: rgb(12, 9, 2);
   }
   
@@ -13,7 +13,7 @@ body{
     position: relative;
   }
   
-  h1{
+  header h1{
     color:  rgb(228, 153, 14);
     font-family: "Lucida Console", "Courier New", monospace;
     font-style: oblique;
@@ -55,12 +55,42 @@ body{
   
   .item-box img {
     float: left;
-    margin: 10px;
+    margin-right: 20px;
+    height: 460px;
   }
 
-  table, th{
-    border: 2px solid black;
+  .item-box p {
+    font-size: 25px;
+    width: 900px;
+    float: left;
+    margin-right: 50px;
+  }
+
+  table{
+    border-collapse: collapse;
     text-align:center;
+    width: 75%;
+  }
+  
+  th {
+    height: 70px;
+    padding: 15px;
+  }
+
+  td{
+    border: 2px solid black;
+    padding: 10px;
+  }
+
+  .imageSalamon img{
+      float: left;     
+      height: 200px;
+      width: 238px;
+  }
+
+  footer div{
+    width: 1670px;
+    height: 215px;
   }
 
   footer{

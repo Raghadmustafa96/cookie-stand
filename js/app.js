@@ -5,7 +5,8 @@ var storeLocationNameList = ['Seattle','Tokyo','Dubai','Paris','Lima'];
 var minCustomerPerHourList = [23,3,11,20,2];
 var maxCustomerPerHourList = [65,24,38,38,16];
 var averageCookiesHourList = [6.3,1.2,3.7,2.3,4.6];
-var contentDiv,salesArticle,salesTable;
+var contentDiv,salesArticle,salesTable,tableHeading;
+var sumOfTotal = [];
 
 function storeLocation(storeLocationName,minCustomerPerHour,maxCustomerPerHour,averageCookiesHour){
   this.storeLocationName = storeLocationName;
@@ -45,6 +46,7 @@ storeLocation.prototype.render = function(){
       storeLocationRow.appendChild(cookiesPerHourData);
     }
   }
+  sumOfTotal.push(DailyLocationTotal);
   var DailyLocationTotalData = document.createElement('td');
   DailyLocationTotalData.textContent = DailyLocationTotal;
   storeLocationRow.appendChild(DailyLocationTotalData);
@@ -54,6 +56,9 @@ function creatTable() {
   contentDiv = document.getElementById('Sales');
   salesArticle = document.createElement('article');
   contentDiv.appendChild(salesArticle);
+  tableHeading = document.createElement('h1');
+  tableHeading.textContent = 'Daily Sales Table';
+  salesArticle.appendChild(tableHeading);
   salesTable = document.createElement('table');
   salesArticle.appendChild(salesTable);
 }
@@ -73,7 +78,6 @@ function headerRow() {
       working_hoursRow.appendChild(working_hoursHeading);
     }
   }
-
   var DailyLocationTotalHeading = document.createElement('th');
   DailyLocationTotalHeading.textContent = 'Daily Location Total' ;
   working_hoursRow.appendChild(DailyLocationTotalHeading);
@@ -99,6 +103,14 @@ function footerRow() {
       TotalRow.appendChild(Totaldata);
     }
   }
+  var sumTotal = 0;
+  for(var i =0 ; i< storeLocationNameList.length;i++){
+    sumTotal = sumTotal + sumOfTotal[i];
+  }
+
+  var sumTotaldata = document.createElement('td');
+  sumTotaldata.textContent = sumTotal;
+  TotalRow.appendChild(sumTotaldata);
 }
 
 //.................................................... start code
