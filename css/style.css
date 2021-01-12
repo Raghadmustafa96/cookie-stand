@@ -56,12 +56,11 @@ body{
   .item-box img {
     float: left;
     margin-right: 20px;
-    height: 460px;
   }
 
   .item-box p {
     font-size: 25px;
-    width: 900px;
+    width: 700px;
     float: left;
     margin-right: 50px;
   }
@@ -83,13 +82,11 @@ body{
   }
 
   .imageSalamon img{
-      float: left;     
       height: 200px;
-      width: 238px;
+      width: 210px;
   }
 
   footer div{
-    width: 1670px;
     height: 215px;
   }
 
