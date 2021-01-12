@@ -3,8 +3,10 @@ body{
   }
   
   main{
-    height: 550px;
+    height: 700px;
     color: rgb(12, 9, 2);
+    position: relative;
+
   }
   
   header{
@@ -58,13 +60,6 @@ body{
     margin-right: 20px;
   }
 
-  .item-box p {
-    font-size: 25px;
-    width: 700px;
-    float: left;
-    margin-right: 50px;
-  }
-
   table{
     border-collapse: collapse;
     text-align:center;
@@ -83,13 +78,14 @@ body{
 
   .imageSalamon img{
       height: 200px;
-      width: 210px;
+      width: 180px;
+      position: relative;
   }
 
-  footer div{
-    height: 215px;
+  div{
+    display: inline-block;
   }
-
+ 
   footer{
     background:rgb(10, 22, 48);
     border-color: rgb(228, 153, 14);
