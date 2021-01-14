@@ -5,7 +5,7 @@ var storeLocationNameList = ['Seattle','Tokyo','Dubai','Paris','Lima'];
 var minCustomerPerHourList = [23,3,11,20,2];
 var maxCustomerPerHourList = [65,24,38,38,16];
 var averageCookiesHourList = [6.3,1.2,3.7,2.3,4.6];
-var contentDiv,salesArticle,salesTable,tableHeading,totalColumn;
+var contentDiv,salesArticle,salesTable,tableHeading,totalColumn,sumTotal;
 var sumOfTotal = [];
 
 
@@ -105,7 +105,7 @@ function footerRow() {
     totalRow.appendChild(coloumTotalCell);
     coloumTotalCell.textContent = totalColumn[j];
   }
-  var sumTotal = 0;
+  sumTotal = 0;
   for(var i =0 ; i< storeLocationNameList.length;i++){
     sumTotal = sumTotal + sumOfTotal[i];
   }
@@ -113,6 +113,7 @@ function footerRow() {
   var sumTotaldata = document.createElement('td');
   sumTotaldata.textContent = sumTotal;
   totalRow.appendChild(sumTotaldata);
+  console.log(sumTotal);
 }
 
 //.................................................... start code
@@ -170,6 +171,17 @@ function locationSubmitter(event){
   addedLocationName.calculateCustomerPerHour();
   addedLocationName.calculateCookiesPerHour();
   addedLocationName.render();
+
+  var sum = 0;
+  for (var i= 1; i<totalRow.childNodes.length-1;i++){
+    totalRow.childNodes[i].textContent = totalColumn[i-1];
+    sum = sum + totalColumn[i-1];
+  }
+
+  totalRow.childNodes[i].textContent = sum;
+
+  console.log(sumTotal);
+  console.log(sum);
 
   salesTable.appendChild(totalRow);
 }
