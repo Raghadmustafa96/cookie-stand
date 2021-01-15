@@ -5,7 +5,6 @@ body{
   main{
     color: rgb(12, 9, 2);
     position: relative;
-
   }
   
   header{
@@ -54,7 +53,7 @@ body{
   }
   
   .item-box {
-    width: 1320px;
+    width: 1250px;
     margin-left: 50px;
     padding: 10px;
   }
@@ -89,7 +88,7 @@ body{
 
   .imageSalamon img{
       height: 200px;
-      width: 200px;
+      width: 180px;
       position: relative;
       margin-top: 20px;
       border-color: rgb(228, 153, 14);
