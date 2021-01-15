@@ -54,7 +54,7 @@ body{
   }
   
   .item-box {
-    width: 1400px;
+    width: 1320px;
     margin-left: 50px;
     padding: 10px;
   }
@@ -67,7 +67,7 @@ body{
 
 
   .item-box p {
-     font-size: 22px;
+     font-size: 20px;
   }
 
   table{
@@ -89,7 +89,7 @@ body{
 
   .imageSalamon img{
       height: 200px;
-      width: 205px;
+      width: 200px;
       position: relative;
       margin-top: 20px;
       border-color: rgb(228, 153, 14);
