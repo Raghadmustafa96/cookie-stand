@@ -53,10 +53,21 @@ body{
     text-decoration: none;
   }
   
-  
+  .item-box {
+    width: 1400px;
+    margin-left: 50px;
+    padding: 10px;
+  }
+
   .item-box img {
-    float: left;
-    margin-right: 20px;
+    margin-top: 10px;
+    float: right;
+    margin-left: 100px ;
+  }
+
+
+  .item-box p {
+     font-size: 22px;
   }
 
   table{
@@ -78,8 +89,11 @@ body{
 
   .imageSalamon img{
       height: 200px;
-      width: 180px;
+      width: 205px;
       position: relative;
+      margin-top: 20px;
+      border-color: rgb(228, 153, 14);
+      border-style: solid; 
   }
 
   div{
@@ -97,3 +111,26 @@ body{
     text-decoration: none;
     color: darkgoldenrod;
   }
+
+  .location{
+    text-decoration: none;
+    color: rgb(243, 241, 237);
+  }
+
+  .location li {
+    display: block
+  }
+
+  footer li {
+    display: inline-block
+  }
+
+  
+  footer img {
+    height: 30px;
+    width: 30px;
+    position: relative;
+    margin-top: 30px;
+  }
+
+  
