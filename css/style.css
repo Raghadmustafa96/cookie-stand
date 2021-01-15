@@ -117,7 +117,8 @@ body{
   }
 
   .location li {
-    display: block
+    display: block;
+    text-align: center;
   }
 
   footer li {
@@ -130,6 +131,10 @@ body{
     width: 30px;
     position: relative;
     margin-top: 30px;
+    padding-right: 5px;
   }
 
-  
+  .socialIcon {
+    text-align: center;
+  list-style: inside;
+  }
