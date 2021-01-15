@@ -156,34 +156,37 @@ function locationSubmitter(event){
 
   var locationName = event.target.storeLocationName.value;
 
-  var minCustomerPerHour = event.target.minCustomerPerHour.value;
+  var minCustomerPerHour = Number (event.target.minCustomerPerHour.value);
 
-  var maxCustomerPerHour = event.target.maxCustomerPerHour.value;
+  var maxCustomerPerHour = Number (event.target.maxCustomerPerHour.value);
 
-  var averageCookiesHour = event.target.averageCookiesHour.value;
+  var averageCookiesHour = Number(event.target.averageCookiesHour.value);
 
-  var addedLocationName = new StoreLocation(locationName,minCustomerPerHour,maxCustomerPerHour,averageCookiesHour);
+  if(locationName === '' || minCustomerPerHour === ''|| maxCustomerPerHour === ''|| averageCookiesHour === ''|| minCustomerPerHour === maxCustomerPerHour || minCustomerPerHour > maxCustomerPerHour || averageCookiesHour <=	 0 || minCustomerPerHour < 0 || maxCustomerPerHour < 1 ){
+    alert('you should fill valid data');
+  } else{
+    var addedLocationName = new StoreLocation(locationName,minCustomerPerHour,maxCustomerPerHour,averageCookiesHour);
+    console.log(addedLocationName);
 
-  console.log(addedLocationName);
+    salesTable.removeChild(totalRow);
 
-  salesTable.removeChild(totalRow);
+    addedLocationName.calculateCustomerPerHour();
+    addedLocationName.calculateCookiesPerHour();
+    addedLocationName.render();
 
-  addedLocationName.calculateCustomerPerHour();
-  addedLocationName.calculateCookiesPerHour();
-  addedLocationName.render();
+    var sum = 0;
+    for (var i= 1; i<totalRow.childNodes.length-1;i++){
+      totalRow.childNodes[i].textContent = totalColumn[i-1];
+      sum = sum + totalColumn[i-1];
+    }
 
-  var sum = 0;
-  for (var i= 1; i<totalRow.childNodes.length-1;i++){
-    totalRow.childNodes[i].textContent = totalColumn[i-1];
-    sum = sum + totalColumn[i-1];
+    totalRow.childNodes[i].textContent = sum;
+
+    console.log(sumTotal);
+    console.log(sum);
+
+    salesTable.appendChild(totalRow);
   }
-
-  totalRow.childNodes[i].textContent = sum;
-
-  console.log(sumTotal);
-  console.log(sum);
-
-  salesTable.appendChild(totalRow);
 }
 
 
